@@ -1,0 +1,99 @@
+.story {
+	$block: &;
+	width: 80%;
+	margin: 0 auto;
+	box-shadow: 0 3rem 6rem rgba($black, 0.1);
+	background-color: rgba($black, 0.3);
+	border-radius: 3px;
+	padding: 6rem;
+	padding-left: 9rem;
+	font-size: $font-size;
+	transform: skewX(-10deg);
+	color: $gray-300;
+
+	& > * {
+		transform: skewX(10deg);
+	}
+
+	&__image-container {
+		width: 15rem;
+		height: 15rem;
+		background-color: $primary-dark;
+		float: left;
+		shape-outside: circle(50% at 50% 50%);
+		clip-path: circle(50% at 50% 50%);
+		transform: skewX(10deg) translateX(-3rem);
+		display: flex;
+		justify-content: center;
+		transition: $transition;
+	}
+
+	&__image {
+		height: 100%;
+		position: relative;
+		transition: $transition;
+		transform: scale(1.1);
+	}
+
+	&__image-caption {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		font-size: 1.7rem;
+		letter-spacing: 1px;
+		margin-right: -1px;
+		color: $white;
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		transform: translateY(50%);
+		opacity: 0;
+		transition: $transition;
+	}
+
+	&:hover {
+		#{ $block }__image {
+			filter: blur(2px) brightness(80%);
+			transform: scale(1);
+		}
+
+		#{ $block }__image-caption {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	@include breakpoint(md) {
+		transform: skewX(-4deg);
+
+		& > * {
+			transform: skewX(4deg);
+		}
+
+		&__image-container {
+			transform: skewX(4deg) translateX(-3rem);
+		}
+	}
+
+	@include breakpoint(sm) {
+		padding: 5rem;
+
+		transform: skewX(0);
+
+		& > * {
+			transform: skewX(0);
+		}
+
+		&__image-container {
+			transform: skewX(0) translateX(-3rem);
+		}
+	}
+
+	@include breakpoint(xs) {
+		padding: 6rem;
+	}
+}

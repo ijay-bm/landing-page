@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+body {
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	line-height: 1.7;
+	color: $gray-600;
+}
+
+.heading-secondary {
+	display: inline-block;
+	font-size: 3.5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	background-image: linear-gradient(to right, $primary-light, $primary-dark);
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	transition: $transition;
+	letter-spacing: 2px;
+
+	&:hover {
+		transform: skewY(2deg) skewX(10deg) scale(1.1);
+		text-shadow: 0.5rem 1rem 2rem rgba($black, 0.2);
+	}
+}
+
+.heading-tertiary {
+	font-size: $font-size;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.paragraph {
+	font-size: $font-size;
+
+	&:not(:last-child) {
+		margin-bottom: 3rem;
+	}
+}
+
+.fs-sm {
+	font-size: $font-size-sm;
+}
+
+.fs {
+	font-size: $font-size;
+}
+
+.fs-md {
+	font-size: $font-size-md;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+}
+
+a {
+	text-decoration: none;
+}

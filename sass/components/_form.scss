@@ -1,0 +1,138 @@
+.form {
+	$block: &;
+	color: $gray-800;
+
+	&__group {
+		position: relative;
+
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__input {
+		font-size: 1.5rem;
+		font-family: inherit;
+		color: inherit;
+		padding: 1rem 2rem;
+		border-radius: 3px;
+		background-color: rgba($white, 0.5);
+		border: none;
+		outline: none;
+		transition: $transition;
+		border-bottom: 3px solid transparent;
+		display: block;
+		width: 90%;
+
+		&:focus {
+			box-shadow: 0 5px 5px -3px $gray-500;
+		}
+
+		&:focus:invalid {
+			border-color: $danger;
+		}
+
+		&::placeholder {
+			color: $gray-600;
+		}
+
+		&:placeholder-shown + #{$block}__label {
+			opacity: 0;
+			visibility: hidden;
+			transform: translateY(-2rem);
+		}
+	}
+
+	&__label {
+		font-size: 1.5rem;
+		font-weight: 700;
+		color: $gray-600;
+		margin-left: 2rem;
+		margin-top: 0.7rem;
+		display: block;
+		transition: $transition;
+	}
+
+	// radio button
+	&__radio-input {
+		display: none;
+
+		@for $s from 1 through 3 {
+			$yPos: 4.5rem * ($s - 1);
+			&:nth-of-type(#{$s}):checked ~ #{$block}__radio-dot {
+				visibility: visible;
+				opacity: 1;
+				transform: translateY($yPos);
+				&::before {
+					animation: radioDotLaunch#{$s} 0.3s ease-in-out forwards;
+				}
+				@keyframes radioDotLaunch#{$s} {
+					from,
+					to {
+						transform: translateY(0) scale(1);
+					}
+					25% {
+						transform: translateY(0) scale(0.2);
+					}
+					50% {
+						transform: scale(0.2);
+					}
+					67% {
+						transform: scale(0.2);
+					}
+					83% {
+						transform: translateY(0.3rem) scale(1);
+					}
+					93% {
+						transform: translateY(-0.3rem) scale(1);
+					}
+					96% {
+						transform: translateY(0.3rem) scale(1);
+					}
+				}
+			}
+		}
+	}
+
+	&__radio-label {
+		display: flex;
+		cursor: pointer;
+		transition: $transition;
+
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+		}
+
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 3rem;
+			height: 3rem;
+			margin-right: 1rem;
+			border-radius: 50%;
+			border: 3px solid $primary;
+		}
+	}
+
+	&__radio-dot {
+		position: absolute;
+		top: 0.6rem;
+		left: 0.6rem;
+		width: 1.8rem;
+		height: 1.8rem;
+		z-index: 1;
+		transition: $transition;
+		opacity: 0;
+		visibility: hidden;
+
+		&:before {
+			content: "";
+			display: block;
+			background-color: $primary;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+		}
+	}
+	// end of radio button
+}

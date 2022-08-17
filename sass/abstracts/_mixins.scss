@@ -1,0 +1,9 @@
+@mixin breakpoint($breakpoint) {
+	@each $key, $value in $grid-breakpoints {
+		@if $breakpoint == $key {
+			@media only screen and (max-width: #{$value}) {
+				@content;
+			}
+		}
+	}
+}

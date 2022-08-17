@@ -1,0 +1,93 @@
+.button {
+	padding: 1rem 2.5rem;
+	position: relative;
+	font-size: $font-size;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: $transition;
+	display: inline-block;
+	border: 1px solid $gray-600;
+	background-color: $gray-600;
+	color: $white;
+	box-shadow: 0 5px 5px -3px rgba($black, 0.2);
+	cursor: pointer;
+
+	&:hover {
+		background-color: transparent;
+		color: $gray-600;
+		box-shadow: 0 8px 8px rgba($black, 0.2);
+		transform: scale(1.02);
+	}
+
+	&:active {
+		box-shadow: 0 3px 3px rgba($black, 0.2);
+		transform: scale(0.98);
+	}
+
+	&--primary {
+		background-color: $primary;
+		border-color: $primary;
+		color: $gray-200;
+
+		&:hover {
+			background-color: darken($primary, 10%);
+		}
+	}
+
+	&--white {
+		background-color: $white;
+		border-color: $white;
+		color: $gray-600;
+
+		&:hover {
+			background-color: darken($white, 10%);
+		}
+	}
+
+	&--text {
+		color: $primary;
+		border-bottom: 1px solid $primary;
+		background-color: transparent;
+		border-color: transparent;
+		border-bottom: 1px solid $primary;
+		box-shadow: 0 5px 5px -3px rgba($black, 0.2);
+
+		&:hover {
+			background-color: $primary;
+			color: $white;
+			box-shadow: 0 8px 8px rgba($black, 0.2);
+			transform: scale(1.02);
+		}
+
+		&:active {
+			box-shadow: 0 3px 3px rgba($black, 0.2);
+			transform: scale(0.98);
+		}
+	}
+
+	&--icon {
+		color: inherit;
+		box-shadow: 0 0 5px rgba($black, 0.2);
+		background-color: transparent;
+		border: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		height: 5rem;
+		width: 5rem;
+		font-size: 3rem;
+		transition: $transition;
+
+		&:hover {
+			color: $primary;
+			box-shadow: 0 0 8px rgba($black, 0.2);
+			transform: scale(1.02);
+		}
+
+		&:active {
+			box-shadow: 0 0 3px rgba($black, 0.2);
+			transform: scale(0.98);
+		}
+	}
+}

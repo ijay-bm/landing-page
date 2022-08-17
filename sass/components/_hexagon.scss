@@ -1,0 +1,300 @@
+// hexagon
+$width: 60rem;
+$height: 50rem;
+$halfWidth: calc($width / 2);
+$halfHeight: calc($height / 2);
+$gutter: 10rem;
+$armLength: calc($halfWidth / tan(30deg));
+
+$painThickness: 6px;
+$halfPainThickness: calc($painThickness / 2);
+
+.hexagon {
+	--hexagon-rotation-y: 0deg;
+	--hexagon-carousel-x: 0;
+	$block: &;
+	width: 100%;
+	height: 100%;
+	perspective: 1500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	&__panes {
+		width: $width;
+		height: $height;
+		transform-style: preserve-3d;
+		transition: $transition;
+		transform: translateZ(calc(-1 * ($armLength + $gutter)))
+			rotateY(var(--hexagon-rotation-y));
+		position: relative;
+	}
+
+	&__pane {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		transform-style: preserve-3d;
+		transition: $transition;
+
+		&:nth-child(1) {
+			transform: translateZ(calc($armLength + $gutter)) scale(0.7);
+		}
+
+		&:nth-child(2) {
+			transform: rotateY(60deg) translateZ(calc($armLength + $gutter))
+				scale(0.7);
+		}
+
+		&:nth-child(3) {
+			transform: rotateY(120deg) translateZ(calc($armLength + $gutter))
+				scale(0.7);
+		}
+
+		&:nth-child(4) {
+			transform: rotateY(180deg) translateZ(calc($armLength + $gutter))
+				scale(0.7);
+		}
+
+		&:nth-child(5) {
+			transform: rotateY(240deg) translateZ(calc($armLength + $gutter))
+				scale(0.7);
+		}
+
+		&:nth-child(6) {
+			transform: rotateY(300deg) translateZ(calc($armLength + $gutter))
+				scale(0.7);
+		}
+
+		&--active {
+			&:nth-child(1) {
+				transform: translateZ(calc($armLength + $gutter)) scale(1);
+			}
+
+			&:nth-child(2) {
+				transform: rotateY(60deg) translateZ(calc($armLength + $gutter))
+					scale(1);
+			}
+
+			&:nth-child(3) {
+				transform: rotateY(120deg) translateZ(calc($armLength + $gutter))
+					scale(1);
+			}
+
+			&:nth-child(4) {
+				transform: rotateY(180deg) translateZ(calc($armLength + $gutter))
+					scale(1);
+			}
+
+			&:nth-child(5) {
+				transform: rotateY(240deg) translateZ(calc($armLength + $gutter))
+					scale(1);
+			}
+
+			&:nth-child(6) {
+				transform: rotateY(300deg) translateZ(calc($armLength + $gutter))
+					scale(1);
+			}
+
+			& > #{$block}__pane-content {
+				filter: blur(0);
+				opacity: 1;
+				transform: translateZ(1rem);
+			}
+		}
+	}
+
+	&__pane-side {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		transition: $transition;
+		background-color: rgba($black, 0.15);
+		backdrop-filter: blur(16px);
+
+		&:nth-child(1) {
+			transform: translateZ($halfPainThickness);
+		}
+
+		&:nth-child(2) {
+			transform: translateZ(-$halfPainThickness);
+		}
+
+		&:nth-child(3) {
+			width: $painThickness;
+			transform: rotateY(270deg) translateZ(calc($halfPainThickness - 1px));
+		}
+
+		&:nth-child(4) {
+			width: $painThickness;
+			transform: rotateY(90deg)
+				translateZ(calc($width - $halfPainThickness - 1px));
+		}
+	}
+
+	&__pane-content {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		opacity: 0.3;
+		transform: translateZ(2.5rem);
+		transition: $transition;
+	}
+
+	&__controls {
+		position: absolute;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		z-index: 1;
+		padding: 0 0.5rem;
+	}
+
+	&__control-button {
+		cursor: pointer;
+		border: none;
+		background: none;
+		outline: none;
+		color: $primary-light;
+		transition: all 0.2s ease-in-out;
+		border-radius: 100%;
+		padding: 1rem;
+		width: 45px;
+		height: 45px;
+		position: relative;
+		border-width: 2px;
+		border-style: solid;
+		box-shadow: 0 0 5px $primary-dark;
+
+		> * {
+			position: absolute;
+		}
+
+		&:hover {
+			transform: scale(1.05);
+			box-shadow: 0 0 8px $primary-dark;
+		}
+
+		&:active {
+			transform: scale(0.95);
+			box-shadow: none;
+			box-shadow: 0 0 3px $primary-dark;
+		}
+	}
+
+	&__previous {
+		> * {
+			position: absolute;
+			top: 22%;
+			left: 19%;
+		}
+	}
+
+	&__next {
+		> * {
+			position: absolute;
+			top: 21%;
+			left: 27%;
+		}
+	}
+
+	@media only screen and (max-width: 750px) {
+		$width: 50rem;
+		$height: 55rem;
+		$halfWidth: calc($width / 2);
+		$halfHeight: calc($height / 2);
+		$armLength: calc($halfWidth / tan(30deg));
+
+		&__panes {
+			width: $width;
+			height: $height;
+			transform: translateZ(calc(-1 * ($armLength + $gutter)))
+				rotateY(var(--hexagon-rotation-y));
+		}
+
+		&__pane {
+			&:nth-child(1) {
+				transform: translateZ(calc($armLength + $gutter)) scale(0.7);
+			}
+
+			&:nth-child(2) {
+				transform: rotateY(60deg) translateZ(calc($armLength + $gutter))
+					scale(0.7);
+			}
+
+			&:nth-child(3) {
+				transform: rotateY(120deg) translateZ(calc($armLength + $gutter))
+					scale(0.7);
+			}
+
+			&:nth-child(4) {
+				transform: rotateY(180deg) translateZ(calc($armLength + $gutter))
+					scale(0.7);
+			}
+
+			&:nth-child(5) {
+				transform: rotateY(240deg) translateZ(calc($armLength + $gutter))
+					scale(0.7);
+			}
+
+			&:nth-child(6) {
+				transform: rotateY(300deg) translateZ(calc($armLength + $gutter))
+					scale(0.7);
+			}
+
+			&--active {
+				&:nth-child(1) {
+					transform: translateZ(calc($armLength + $gutter)) scale(1);
+				}
+
+				&:nth-child(2) {
+					transform: rotateY(60deg) translateZ(calc($armLength + $gutter))
+						scale(1);
+				}
+
+				&:nth-child(3) {
+					transform: rotateY(120deg) translateZ(calc($armLength + $gutter))
+						scale(1);
+				}
+
+				&:nth-child(4) {
+					transform: rotateY(180deg) translateZ(calc($armLength + $gutter))
+						scale(1);
+				}
+
+				&:nth-child(5) {
+					transform: rotateY(240deg) translateZ(calc($armLength + $gutter))
+						scale(1);
+				}
+
+				&:nth-child(6) {
+					transform: rotateY(300deg) translateZ(calc($armLength + $gutter))
+						scale(1);
+				}
+			}
+		}
+
+		&__pane-side {
+			&:nth-child(4) {
+				transform: rotateY(90deg)
+					translateZ(calc($width - $halfPainThickness - 1px));
+			}
+		}
+	}
+
+	@include breakpoint(sm) {
+		&__panes {
+			margin-bottom: 2rem;
+		}
+
+		&__previous {
+			margin-right: 6rem;
+		}
+
+		&__controls {
+			position: initial;
+			justify-content: center;
+		}
+	}
+}

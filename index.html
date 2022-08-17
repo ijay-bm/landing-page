@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<title>Spacefarers | Explore our Solar System</title>
+	</head>
+	<body>
+		<div class="navigation">
+			<input
+				type="checkbox"
+				id="navigation-toggle"
+				class="navigation__checkbox"
+			/>
+
+			<label for="navigation-toggle" class="navigation__button">
+				<span class="navigation__burger"></span>
+			</label>
+
+			<div class="navigation__background"></div>
+
+			<label for="navigation-toggle"></label>
+
+			<nav class="navigation__nav" aria-label="Main Navigation">
+				<ul class="navigation__list">
+					<li class="navigation__item">
+						<a
+							href="#section-about"
+							class="navigation__link"
+							onclick="onNavLinkClick()"
+							>About Spacefarers</a
+						>
+					</li>
+					<li class="navigation__item">
+						<a
+							href="#section-features"
+							class="navigation__link"
+							onclick="onNavLinkClick()"
+							>Why Work With Us</a
+						>
+					</li>
+					<li class="navigation__item">
+						<a
+							href="#section-professions"
+							class="navigation__link"
+							onclick="onNavLinkClick()"
+							>Professions</a
+						>
+					</li>
+					<li class="navigation__item">
+						<a
+							href="#section-inquiry"
+							class="navigation__link"
+							onclick="onNavLinkClick()"
+							>Help Another Way</a
+						>
+					</li>
+					<li class="navigation__item">
+						<a
+							href="#section-stories"
+							class="navigation__link"
+							onclick="onNavLinkClick()"
+							>Stories</a
+						>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+		<header class="header">
+			<div class="header__logo-container">
+				<img
+					srcset="img/logo-2-1x.png 1x, img/logo-2-2x.png 2x"
+					alt="Logo"
+					class="header__logo"
+				/>
+			</div>
+			<div class="header__message-container">
+				<h1 class="header__message">
+					<span class="header__message-main">Spacefarers</span>
+					<span class="header__message-sub"
+						>Go beyond to where none have stood</span
+					>
+				</h1>
+				<a class="header__button button button--white" href="">Our Missions</a>
+			</div>
+		</header>
+
+		<main>
+			<section class="section-about" id="section-about">
+				<div class="text-center mb-lg clip-path-above">
+					<h2 class="heading-secondary">Explore our vast system and beyond</h2>
+				</div>
+
+				<div class="row align-items-center">
+					<div class="col-1-2 clip-path-above">
+						<h3 class="heading-tertiary mb-sm">Explore the unknown</h3>
+						<p class="paragraph">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Cupiditate maiores autem amet commodi totam cumque dolorem
+							repellat accusantium mollitia officia, blanditiis earum dolorum,
+							accusamus provident iste obcaecati consequatur facilis
+							dignissimos.
+						</p>
+
+						<h3 class="heading-tertiary mb-sm">
+							Be on the frontier of humanity
+						</h3>
+						<p class="paragraph">
+							Quos unde ipsam, nemo amet voluptatem animi impedit optio expedita
+							est eaque vitae aperiam quam beatae vel asperiores libero rerum
+							molestiae sunt!
+						</p>
+
+						<a href="#" class="button button--text">Learn More &rarr;</a>
+					</div>
+					<div class="col-1-2 clip-path-above">
+						<div class="composition">
+							<div class="composition__images">
+								<img
+									srcset="
+										img/composition-2-small.jpg 300w,
+										img/composition-2.jpg       700w
+									"
+									sizes="(max-width: 600px) 300px, 700px"
+									src="img/composition-2.jpg"
+									alt="Generic Space Station"
+									class="composition__image"
+								/>
+								<img
+									srcset="
+										img/composition-1-small.jpg 300w,
+										img/composition-1.jpg       700w
+									"
+									sizes="(max-width: 576px) 300px, 700px"
+									src="img/composition-1.jpg"
+									alt="Generic Space Station"
+									class="composition__image"
+								/>
+								<img
+									srcset="
+										img/composition-3-small.jpg 300w,
+										img/composition-3.jpg       700w
+									"
+									sizes="(max-width: 576px) 300px, 700px"
+									src="img/composition-3.jpg"
+									alt="Generic Space Station"
+									class="composition__image"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- section-features -->
+			<section class="section-features" id="section-features">
+				<div class="row">
+					<div class="col-1-4">
+						<div class="feature-box">
+							<i class="feature-box__icon im im-gear"></i>
+							<h3 class="heading-tertiary mb">Maintain Infrastructure</h3>
+							<p class="feature-box__text">
+								Ab esse ratione libero aliquid at consequatur quidem dolor ipsa,
+								iste enim inventore labore eligendi laudantium id praesentium
+								voluptatum.
+							</p>
+						</div>
+					</div>
+
+					<div class="col-1-4">
+						<div class="feature-box">
+							<i class="feature-box__icon im im-rocket"></i>
+							<h3 class="heading-tertiary mb">Build the Rockets of Tomorrow</h3>
+							<p class="feature-box__text">
+								Expedita esse, quos corporis libero temporibus atque aspernatur
+								fuga molestiae molestias tempora, tempore animi itaque. Maiores
+								non odio eligendi rem cum?
+							</p>
+						</div>
+					</div>
+
+					<div class="col-1-4">
+						<div class="feature-box">
+							<i class="feature-box__icon im im-flask"></i>
+							<h3 class="heading-tertiary mb">Research & Development</h3>
+							<p class="feature-box__text">
+								Laudantium natus pariatur accusamus inventore saepe labore, ea
+								ipsa blanditiis in neque cumque itaque. Similique commodi quasi
+								tempora dolores mollitia quos?
+							</p>
+						</div>
+					</div>
+
+					<div class="col-1-4">
+						<div class="feature-box">
+							<i class="feature-box__icon im im-heart"></i>
+							<h3 class="heading-tertiary mb">Do What You Love</h3>
+							<p class="feature-box__text">
+								Molestiae blanditiis repellat ullam modi aliquid maiores non,
+								eaque quo placeat, dolor quidem molestias perspiciatis ipsa.
+								Adipisci!
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end of section-features -->
+
+			<!-- section-partners -->
+			<section class="section-partners">
+				<div class="content">
+					<div class="text-center mb-md">
+						<h2 class="heading-secondary">Our Partners</h2>
+					</div>
+
+					<div class="slider">
+						<div class="slider__track">
+							<div class="slider__slide">
+								<img
+									srcset="
+										img/company-logo-1-1x.png 1x,
+										img/company-logo-1-2x.png 2x
+									"
+									alt="Some Company"
+									class="partner__logo partner__logo--spacex"
+								/>
+							</div>
+							<div class="slider__slide">
+								<img
+									srcset="
+										img/company-logo-2-1x.png 1x,
+										img/company-logo-2-2x.png 2x
+									"
+									alt="Some Company"
+									class="partner__logo"
+								/>
+							</div>
+							<div class="slider__slide">
+								<img
+									srcset="
+										img/company-logo-3-1x.png 1x,
+										img/company-logo-3-2x.png 2x
+									"
+									alt="Some Company"
+									class="partner__logo"
+								/>
+							</div>
+							<div class="slider__slide">
+								<img
+									srcset="
+										img/company-logo-4-1x.png 1x,
+										img/company-logo-4-2x.png 2x
+									"
+									alt="Some Company"
+									class="partner__logo"
+								/>
+							</div>
+							<div class="slider__slide">
+								<img
+									srcset="
+										img/company-logo-5-1x.png 1x,
+										img/company-logo-5-2x.png 2x
+									"
+									alt="Some Company"
+									class="partner__logo"
+								/>
+							</div>
+							<div class="slider__slide">
+								<img
+									srcset="
+										img/company-logo-6-1x.png 1x,
+										img/company-logo-6-2x.png 2x
+									"
+									alt="Some Company"
+									class="partner__logo partner__logo--planet"
+								/>
+							</div>
+							<div class="slider__slide">
+								<img
+									srcset="
+										img/company-logo-1-1x.png 1x,
+										img/company-logo-1-2x.png 2x
+									"
+									alt="Some Company"
+									class="partner__logo partner__logo--spacex"
+								/>
+							</div>
+							<div class="slider__slide">
+								<img
+									srcset="
+										img/company-logo-2-1x.png 1x,
+										img/company-logo-2-2x.png 2x
+									"
+									alt="Some Company"
+									class="partner__logo"
+								/>
+							</div>
+							<div class="slider__slide">
+								<img
+									srcset="
+										img/company-logo-3-1x.png 1x,
+										img/company-logo-3-2x.png 2x
+									"
+									alt="Some Company"
+									class="partner__logo"
+								/>
+							</div>
+							<div class="slider__slide">
+								<img
+									srcset="
+										img/company-logo-4-1x.png 1x,
+										img/company-logo-4-2x.png 2x
+									"
+									alt="Some Company"
+									class="partner__logo"
+								/>
+							</div>
+							<div class="slider__slide">
+								<img
+									srcset="
+										img/company-logo-5-1x.png 1x,
+										img/company-logo-5-2x.png 2x
+									"
+									alt="Some Company"
+									class="partner__logo"
+								/>
+							</div>
+							<div class="slider__slide">
+								<img
+									srcset="
+										img/company-logo-6-1x.png 1x,
+										img/company-logo-6-2x.png 2x
+									"
+									alt="Some Company"
+									class="partner__logo partner__logo--planet"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end of section-partners -->
+
+			<!-- section-professions -->
+			<section class="section-professions" id="section-professions">
+				<div class="text-center mb-lg">
+					<h2 class="heading-secondary">What We Need!</h2>
+				</div>
+
+				<div class="hexagon mb-lg" id="hexagon">
+					<div class="hexagon__panes" id="hexagon-panes">
+						<div class="hexagon__pane">
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-content">
+								<div class="card-box">
+									<div class="card-box__image-showcase"></div>
+									<div class="card-box__body">
+										<h3 class="card-box__heading">Aerospace Engineer</h3>
+										<div class="fs-sm mb">
+											<p class="mb-sm">
+												Assumenda eos nostrum magnam commodi quos repellat
+												veritatis, quam architecto ipsa a modi omnis labore
+												fugiat, officiis ratione laudantium praesentium autem
+												sapiente!
+											</p>
+
+											<p>
+												To qualify for GS-15, you must have one year of directly
+												related specialized experience equivalent to the GS-14
+												level:
+											</p>
+
+											<ul class="mb-sm">
+												<li>
+													Atlas V, Delta IV, Falcon 9, Pegasus, and Antares
+												</li>
+												<li>
+													Performing software engineering, IT systems, and
+													Windows based systems engineering
+												</li>
+												<li>
+													Leading a teams of engineers and providing strategic
+													planning and program development in the field of
+													telemetry.
+												</li>
+											</ul>
+
+											<p>
+												Eius tempore numquam rem placeat corporis officia
+												magnam. Corporis blanditiis labore corrupti aliquid.
+											</p>
+										</div>
+
+										<a class="card-box__button button" href="#popup">
+											More Info &rarr;
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="hexagon__pane">
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-content">
+								<div class="card-box">
+									<div class="card-box__image-showcase"></div>
+									<div class="card-box__body">
+										<h3 class="card-box__heading">Computer Engineer</h3>
+										<div class="fs-sm mb">
+											<p class="mb-sm">
+												Adipisci deserunt eveniet sint architecto sapiente odio
+												cupiditate beatae, iure, officia asperiores, error
+												doloribus! Fugit maiores tenetur corrupti, qui nam sequi
+												ipsam?
+											</p>
+
+											<ul>
+												<li>
+													Lorem ipsum dolor sit amet, consectetuer adipiscing
+													elit.
+												</li>
+												<li>Aliquam tincidunt mauris eu risus.</li>
+												<li>Vestibulum auctor dapibus neque.</li>
+												<li>Nunc dignissim risus id metus.</li>
+												<li>Cras ornare tristique elit.</li>
+											</ul>
+										</div>
+										<a class="card-box__button button" href="#popup">
+											More Info &rarr;
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="hexagon__pane">
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-content">
+								<div class="card-box">
+									<div class="card-box__image-showcase"></div>
+									<div class="card-box__body">
+										<h3 class="card-box__heading">Research Engineer</h3>
+										<div class="fs-sm mb">
+											<p class="mb-sm">
+												Quam architecto ipsa a modi omnis labore fugiat,
+												officiis ratione laudantium praesentium autem sapiente!
+											</p>
+
+											<ul>
+												<li>
+													Morbi in sem quis dui placerat ornare. Pellentesque
+													odio nisi, euismod in, pharetra a, ultricies in, diam.
+													Sed arcu. Cras consequat
+												</li>
+												<li>
+													Praesent dapibus, neque id cursus faucibus, tortor
+													neque egestas augue, eu vulputate magna eros eu erat.
+													Aliquam erat volutpat. Nam dui mi, tincidunt quis,
+													accumsan porttitor, facilisis luctus, metus.
+												</li>
+												<li>
+													Phasellus ultrices nulla quis nibh. Quisque a lectus.
+													Donec consectetuer ligula vulputate sem tristique
+													cursus. Nam nulla quam, gravida non, commodo a,
+													sodales sit amet, nisi.
+												</li>
+											</ul>
+										</div>
+										<a class="card-box__button button" href="#popup">
+											More Info &rarr;
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="hexagon__pane">
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-content">
+								<div class="card-box">
+									<div class="card-box__image-showcase"></div>
+									<div class="card-box__body">
+										<h3 class="card-box__heading">Electronics Engineer</h3>
+										<div class="fs-sm mb">
+											<p class="mb-sm">
+												Perferendis, nostrum aliquid placeat delectus accusamus
+												fugit hic aperiam tempore natus enim modi deleniti.
+												Praesentium?
+											</p>
+
+											<ul>
+												<li>Quisque volutpat mattis eros.</li>
+												<li>
+													Donec nec justo eget felis facilisis fermentum.
+													Aliquam porttitor mauris sit amet orci. Aenean
+													dignissim pellentesque felis.
+												</li>
+												<li>
+													Morbi in sem quis dui placerat ornare. Pellentesque
+													odio nisi, euismod in, pharetra a, ultricies in, diam.
+													Sed arcu. Cras consequat.
+												</li>
+											</ul>
+										</div>
+										<a class="card-box__button button" href="#popup">
+											More Info &rarr;
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="hexagon__pane">
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-content">
+								<div class="card-box">
+									<div class="card-box__image-showcase"></div>
+									<div class="card-box__body">
+										<h3 class="card-box__heading">Medical Practioner</h3>
+										<div class="fs-sm mb">
+											<p>
+												Lorem ipsum dolor sit amet consectetur adipisicing elit.
+												Assumenda eos nostrum magnam commodi quos repellat
+												veritatis, quam architecto ipsa a modi omnis labore
+												fugiat, officiis ratione laudantium praesentium autem
+												sapiente!
+											</p>
+											<ul class="mb-sm">
+												<li>Fusce pellentesque suscipit nibh.</li>
+												<li>Integer vitae libero ac risus egestas placerat.</li>
+											</ul>
+
+											<p>Quod nisi quis voluptatum esse voluptatem:</p>
+											<ul>
+												<li>Vivamus vestibulum ntulla nec ante.</li>
+												<li>Praesent placerat risus quis eros.</li>
+												<li>voluptates expedita iure repellat adipisci.</li>
+												<li>Qui molestias obcaecati hic ut animi.</li>
+											</ul>
+										</div>
+										<a class="card-box__button button" href="#popup">
+											More Info &rarr;
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="hexagon__pane">
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-side"></div>
+							<div class="hexagon__pane-content">
+								<div class="card-box">
+									<div class="card-box__image-showcase"></div>
+									<div class="card-box__body">
+										<h3 class="card-box__heading">Administrative Specialist</h3>
+										<div class="fs-sm mb">
+											<p class="mb-sm">
+												Lorem ipsum dolor sit amet consectetur adipisicing elit.
+												Assumenda eos nostrum magnam commodi quos repellat
+												veritatis, quam architecto ipsa a modi omnis labore
+												fugiat, officiis ratione laudantium praesentium autem
+												sapiente!
+											</p>
+											<ol>
+												<li>Vestibulum commodo felis quis tortor.</li>
+												<li>Ut aliquam sollicitudin leo.</li>
+												<li>Cras iaculis ultricies nulla.</li>
+												<li>Donec quis dui at dolor tempor interdum.</li>
+											</ol>
+										</div>
+										<a class="card-box__button button" href="#popup">
+											More Info &rarr;
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="hexagon__controls">
+						<button
+							class="hexagon__previous hexagon__control-button"
+							id="hexagon-previous"
+							onclick="previousFace()"
+						>
+							<!-- Previous -->
+
+							<i class="im im-angle-left"></i>
+						</button>
+						<button
+							class="hexagon__next hexagon__control-button"
+							id="hexagon-next"
+							onclick="nextFace()"
+						>
+							<!-- Next -->
+
+							<i class="im im-angle-right"></i>
+						</button>
+					</div>
+				</div>
+			</section>
+			<!-- end of section-professions -->
+
+			<!-- section-inquiry -->
+			<section class="section-inquiry" id="section-inquiry">
+				<div class="row">
+					<div class="apply">
+						<div class="apply__form">
+							<form action="#" class="form">
+								<h2 class="heading-secondary mb-sm">Help Another Way?</h2>
+								<p class="fs mb-md">
+									If you have skills that can contribute. Let us know!
+								</p>
+
+								<div class="form__group">
+									<input
+										type="text"
+										class="form__input"
+										placeholder="Full Name"
+										id="fullName"
+										name="fullName"
+										required
+									/>
+									<label for="fullName" class="form__label">Full Name</label>
+								</div>
+
+								<div class="form__group">
+									<input
+										type="email"
+										class="form__input"
+										placeholder="Email"
+										id="email"
+										name="email"
+										required
+									/>
+									<label for="email" class="form__label">Email</label>
+								</div>
+
+								<div class="form__group">
+									<input
+										type="radio"
+										class="form__radio-input"
+										name="skill"
+										id="architecture-and-engineering"
+									/>
+									<label
+										for="architecture-and-engineering"
+										class="form__radio-label"
+										>Architecture & Engineering</label
+									>
+									<input
+										type="radio"
+										class="form__radio-input"
+										name="skill"
+										id="science-and-technology"
+									/>
+									<label for="science-and-technology" class="form__radio-label">
+										Science & Technology</label
+									>
+									<input
+										type="radio"
+										class="form__radio-input"
+										name="skill"
+										id="health-and-medicine"
+									/>
+									<label for="health-and-medicine" class="form__radio-label"
+										>Health & Medicine</label
+									>
+									<span class="form__radio-dot"></span>
+								</div>
+
+								<div class="form__group">
+									<button class="button button--text" type="submit">
+										Next Step &rarr;
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end of section-inquiry -->
+
+			<!-- section-stories -->
+			<section class="section-stories" id="section-stories">
+				<div class="bg-video">
+					<video class="bg-video__content" autoplay loop>
+						<source src="video/bg-1.mp4" type="video/mp4" />
+						<source src="video/bg-1.webm" type="video/webm" />
+						Your browser is not supported!
+					</video>
+				</div>
+
+				<div class="text-center mb-lg">
+					<h2 class="heading-secondary">Spacefarer Stories</h2>
+				</div>
+
+				<div class="row">
+					<div class="story">
+						<figure class="story__image-container">
+							<img
+								class="story__image"
+								src="img/story-1.png"
+								alt="Person in Space"
+							/>
+							<figcaption class="story__image-caption">
+								Jonathan Medina
+							</figcaption>
+						</figure>
+						<div class="story__text">
+							<h3 class="heading-tertiary">
+								I Work with the best people in the industry
+							</h3>
+							<p>
+								Corporis commodi culpa ipsa sequi a vero animi reiciendis
+								temporibus similique est, doloribus cupiditate mollitia! Labore
+								animi ex obcaecati aspernatur illum consequatur. Ipsum vitae
+								modi ratione esse? Ea magnam dignissimos, ex minus quaerat
+								fugit, repellat iusto voluptates sapiente, veniam eveniet vero
+								possimus consequuntur blanditiis.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="story">
+						<figure class="story__image-container">
+							<img
+								class="story__image"
+								src="img/story-2.jpg"
+								alt="Person in a Space Suit"
+							/>
+							<figcaption class="story__image-caption">
+								Nelson Holmes
+							</figcaption>
+						</figure>
+						<div class="story__text">
+							<h3 class="heading-tertiary">
+								I Work with the best people in the industry
+							</h3>
+							<p>
+								Voluptates dolor officiis iusto? Laudantium nobis voluptatum id
+								architecto, incidunt rem dolorum molestias. Voluptatibus dolor
+								numquam et beatae ab odio vel quos. Tenetur modi, voluptatibus
+								magnam dolorum unde suscipit voluptatum qui corrupti.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="text-center">
+					<a class="button button--text" href="#"> Read All Stories &rarr; </a>
+				</div>
+			</section>
+			<!-- end of section-stories -->
+		</main>
+
+		<!-- footer -->
+		<footer class="footer">
+			<div class="footer__logo-container">
+				<picture class="footer__logo">
+					<source srcset="img/logo-1-1x.png" media="(max-width: 450px)" />
+					<img
+						srcset="img/logo-2-1x.png 1x, img/logo-2-2x.png 2x"
+						src="img/logo-2-2x.png"
+						alt="Logo"
+						class="footer__logo"
+					/>
+				</picture>
+				<span class="footer__company-name">Spacefarers</span>
+			</div>
+			<div class="row">
+				<div class="col-1-2">
+					<div class="footer__navigation">
+						<nav class="footer__list" aria-label="Footer Navigation">
+							<span class="footer__item">
+								<a href="#" class="footer__link">Company</a>
+							</span>
+							<span class="footer__item">
+								<a href="#" class="footer__link">Contact Us</a>
+							</span>
+							<span class="footer__item">
+								<a href="#" class="footer__link">Careers</a>
+							</span>
+							<span class="footer__item">
+								<a href="#" class="footer__link">Privacy Policy</a>
+							</span>
+							<span class="footer__item">
+								<a href="#" class="footer__link">Terms</a>
+							</span>
+						</nav>
+					</div>
+				</div>
+				<div class="col-1-2">
+					<div class="footer__copyright">
+						<p class="mb">
+							Built by <a href="#" class="footer__link">Ijay Mangili</a> for the
+							lols, based on the course taught by
+							<a href="#" class="footer__link">Jonas Schmedtmann</a>.
+						</p>
+						<p>
+							Copyright &copy; by Ijay Mangili. You are 100% allowed to use this
+							webpage for both personal and commercial use, but NOT to claim it
+							as your own design. A credit to
+							<a href="#" class="footer__link">Jonas Schmedtmann</a> and
+							<a href="#" class="footer__link">Ijay Mangili</a> is highly
+							appreciated!
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- end of footer -->
+
+		<!-- popups -->
+		<div class="popup" id="popup" onclick="onPopupClick(event)">
+			<div class="popup__content">
+				<div class="popup__left">
+					<img
+						src="img/popup-1.jpg"
+						alt="On-The-Job Photo"
+						class="popup__image"
+					/>
+					<img
+						src="img/popup-2.jpg"
+						alt="On-The-Job Photo"
+						class="popup__image"
+					/>
+				</div>
+				<div class="popup__right">
+					<a href="#section-tours" class="popup__close button button--icon">
+						<i class="im im-x-mark"></i>
+					</a>
+
+					<h2 class="popup__heading heading-secondary mb-sm">
+						Start Your Application Now
+					</h2>
+
+					<h3 class="heading-tertiary mb-sm">
+						Important &ndash; Please read these terms before applying
+					</h3>
+					<p class="popup__text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero
+						enim, volutpat vitae diam sit amet, congue laoreet urna. Aliquam ac
+						hendrerit orci. Morbi in dignissim felis. Vestibulum lobortis
+						consectetur nibh in convallis. Nam in ultrices purus. Nam eget leo
+						accumsan, finibus velit sed, imperdiet est. Quisque vulputate est
+						iaculis justo aliquam semper. Suspendisse fermentum sagittis enim at
+						tincidunt. Vivamus tempor nulla ac quam porta scelerisque. Nam
+						maximus euismod maximus. Ut suscipit accumsan urna at tristique.
+						Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+						posuere cubilia curae; Sed elementum eu massa non pulvinar. Aliquam
+						erat volutpat. Integer at est mattis, lobortis libero ac,
+						ullamcorper odio. Integer ut lectus cursus dolor elementum tempor.
+					</p>
+					<a href="" class="button button--primary">Apply Now</a>
+				</div>
+			</div>
+		</div>
+		<!-- end of popups -->
+	</body>
+	<script src="js/scripts.js"></script>
+</html>

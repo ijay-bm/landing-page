@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+
+	@media only screen and (min-width: $xxl) {
+		font-size: 66%;
+	}
+
+	@include breakpoint(xl) {
+		font-size: 58%;
+	}
+
+	@include breakpoint(lg) {
+		font-size: 55%;
+	}
+
+	@include breakpoint(sm) {
+		font-size: 52%;
+	}
+
+	@include breakpoint(xs) {
+		font-size: 45%;
+	}
+}
+
+body {
+	box-sizing: border-box;
+}
+
+::selection {
+	background-color: $primary;
+	color: white;
+}

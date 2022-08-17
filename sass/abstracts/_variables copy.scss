@@ -1,0 +1,127 @@
+$color: #101b39;
+$color: #333136;
+$color: #6f6d72;
+$color: #b4b1b8;
+$color: #e9e8ee;
+
+$color: #210535;
+$color: #430d4b;
+$color: #7b337d;
+$color: #c874b2;
+$color: #f5d5e0;
+
+$color: #000000;
+$color: #051427;
+$color: #530f1e;
+$color: #a44322;
+$color: #f8bc04;
+
+$color: #0b1f3a;
+$color: #76101e;
+$color: #133769;
+$color: #c9374c;
+$color: #c2dde4;
+
+$color: #013026;
+$color: #014760;
+$color: #040505;
+$color: #a1ce3f;
+$color: #cbe58e;
+
+$color: #323031;
+$color: #3d3b3c;
+$color: #7f7979;
+$color: #c1bdb3;
+$color: #5f5b6b;
+
+// colors
+$primary: #1f59aa;
+$primary-dark: darken($primary, 15%);
+$primary-light: lighten($primary, 15%);
+
+$warning: #ff9900;
+$warning-dark: darken($warning, 15%);
+$warning-light: lighten($warning, 15%);
+
+$danger: #cc3300;
+$danger-dark: darken($danger, 15%);
+$danger-light: lighten($danger, 15%);
+
+$info: #027fac;
+$info-dark: darken($info, 15%);
+$info-light: lighten($info, 15%);
+
+$color1: #76101e;
+$color1-dark: darken($color1, 15%);
+$color1-light: lighten($color1, 15%);
+
+$color2: #107e57;
+$color2-dark: darken($color2, 15%);
+$color2-light: lighten($color2, 15%);
+
+$color3: #f8bc04;
+$color3-dark: darken($color3, 15%);
+$color3-light: lighten($color3, 15%);
+
+$color4: #530f1e;
+$color4-dark: darken($color4, 15%);
+$color4-light: lighten($color4, 15%);
+
+$color5: #7b337d;
+$color5-dark: darken($color5, 15%);
+$color5-light: lighten($color5, 15%);
+
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$white: white;
+$black: black;
+
+// font
+$font-size-sm: 1.3rem;
+$font-size: 1.6rem;
+$font-size-md: 2rem;
+$font-size-lg: 4rem;
+$font-size-xl: 8rem;
+
+// grid
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 4rem;
+
+$transition-fast: all 0.1s ease-in-out;
+$transition-slow: all 0.35s ease-in-out;
+$transition: all 0.25s ease-in-out;
+$transition-normal: all 0.25s;
+
+//
+$box-shadow: 0 0 5px $black;
+
+$border-radius: 3px;
+
+$mb-sm: 0.8rem;
+$mb: 1.6rem;
+$mb-md: 4rem;
+$mb-lg: 8rem;
+
+$grid-breakpoints: (
+	xs: 450px,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px
+);
+
+$xs: 450px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;

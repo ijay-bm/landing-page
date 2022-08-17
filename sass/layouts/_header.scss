@@ -1,0 +1,87 @@
+.header {
+	height: 95vh;
+	background-image: linear-gradient(
+			to bottom right,
+			rgba($primary-light, 0.6),
+			rgba($primary-dark, 0.6)
+		),
+		url("../img/bg-1-small.jpg");
+	background-size: cover;
+	background-position: center;
+	clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+	position: relative;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 3rem;
+
+	@media only screen and (min-resolution: 192dpi) and (min-width: 600px), (min-width: 1400px) {
+		background-image: linear-gradient(
+				to bottom right,
+				rgba($primary-light, 0.6),
+				rgba($primary-dark, 0.6)
+			),
+			url("../img/bg-1.jpg");
+	}
+	
+	&__logo-container {
+		position: absolute;
+		top: 2vw;
+		left: 2vw;
+	}
+
+	&__logo {
+		height: 8rem;
+		filter: invert(1);
+	}
+
+	&__message-container {
+		transform: translateY(-6%);
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	// if another heading 1 is needed, separate this into a typography
+	&__message {
+		color: $white;
+		text-transform: uppercase;
+		margin-bottom: 23vh;
+
+		&-main {
+			font-weight: 500;
+			display: block;
+			font-size: 4.5rem;
+			letter-spacing: 0.5em;
+			margin-right: -0.5em;
+			animation: slideInFromLeft 0.4s ease-out;
+			margin-bottom: 4rem;
+
+			@include breakpoint(xs) {
+				font-size: 4rem;
+			}
+
+			@media only screen and (max-width: 360px) {
+				font-size: 3.5rem;
+			}
+		}
+
+		&-sub {
+			display: block;
+			font-weight: 400;
+			font-size: 2rem;
+			letter-spacing: 0.42em;
+			margin-right: -0.42em;
+			animation: slideInFromRight 0.4s ease-out;
+		}
+	}
+
+	&__button {
+		animation: slideInFromBottom 0.4s ease-out 0.4s backwards;
+	}
+}

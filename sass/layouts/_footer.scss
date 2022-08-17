@@ -1,0 +1,122 @@
+.footer {
+	background-color: $gray-900;
+	padding: 10rem 3rem;
+	position: relative;
+	color: $gray-400;
+
+	&__logo-container {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: $mb-lg;
+		align-items: center;
+	}
+
+	&__logo {
+		width: 10rem;
+		height: auto;
+		filter: invert(55%) sepia(70%) saturate(1160%) hue-rotate(188deg)
+			brightness(92%) contrast(94%);
+	}
+
+	&__company-name {
+		font-size: 5rem;
+		letter-spacing: 0.4rem;
+		margin-right: -0.4rem;
+		text-transform: uppercase;
+		background-image: linear-gradient(to right, $primary-light, $primary-dark);
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
+	}
+
+	&__navigation {
+		border-top: 2px solid $gray-800;
+		width: fit-content;
+	}
+
+	&__list {
+		display: flex;
+	}
+
+	&__item {
+		padding: 1rem;
+	}
+
+	&__link {
+		text-decoration: none;
+		text-transform: uppercase;
+		color: $info-light;
+		display: inline-block;
+		position: relative;
+		transition: $transition-normal;
+		white-space: nowrap;
+
+		&:hover {
+			color: $info;
+
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: -2px;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background-color: $info;
+				animation: linkHoverUnderline 0.25s ease-in-out forwards;
+			}
+		}
+	}
+
+	&__copyright {
+		padding-top: 1.2rem;
+		border-top: 2px solid $gray-800;
+		font-size: $font-size-sm;
+	}
+
+	@media only screen and (max-width: 1100px) {
+		&__list {
+			flex-direction: column;
+		}
+
+		.row {
+			.col-1-2 {
+				&:first-child {
+					width: calc(20% - $gutter-horizontal);
+				}
+
+				&:last-child {
+					width: 80%;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(md) {
+		.row {
+			.col-1-2 {
+				&:first-child {
+					width: calc(30% - $gutter-horizontal) !important;
+					margin-right: $gutter-horizontal !important;
+				}
+
+				&:last-child {
+					width: 70% !important;
+				}
+			}
+		}
+	}
+
+	@include breakpoint(sm) {
+		.row {
+			.col-1-2 {
+				&:first-child {
+					width: calc(40% - $gutter-horizontal) !important;
+				}
+
+				&:last-child {
+					width: 60% !important;
+				}
+			}
+		}
+	}
+}

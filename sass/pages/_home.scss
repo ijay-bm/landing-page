@@ -1,0 +1,532 @@
+// about section-about
+.section-about {
+	padding: 20rem 3rem 10rem;
+	background-color: $gray-100;
+	margin-top: -15rem;
+
+	.row {
+		@media only screen and (max-width: 1000px) {
+			> .col-1-2:first-child {
+				width: calc(70% - $gutter-horizontal);
+			}
+
+			> .col-1-2:last-child {
+				width: 30%;
+			}
+		}
+	}
+}
+// end of about section-about
+
+// section-features
+.section-features {
+	padding: 25rem 3rem 10rem;
+	margin-top: -15rem;
+	background-image: linear-gradient(
+			to bottom right,
+			rgba($primary-light, 0.3),
+			rgba($primary-dark, 0.3)
+		),
+		url("../img/bg-2.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	clip-path: polygon(0 20vh, 100% 0, 100% 100%, 0 100%);
+
+	.row {
+		max-width: $grid-width;
+		.col-1-4 {
+			@media only screen and (max-width: 1000px) {
+				.feature-box {
+					max-width: 28rem;
+				}
+			}
+
+			&:nth-child(1) {
+				.feature-box {
+					&__icon {
+						background-image: linear-gradient(to right, $color3, $color4-light);
+					}
+				}
+			}
+
+			&:nth-child(2) {
+				.feature-box {
+					&__icon {
+						background-image: linear-gradient(to right, $color4, $color5-light);
+					}
+				}
+			}
+
+			&:nth-child(3) {
+				.feature-box {
+					&__icon {
+						background-image: linear-gradient(to right, $color2, $color3-light);
+					}
+				}
+			}
+			&:nth-child(4) {
+				.feature-box {
+					&__icon {
+						background-image: linear-gradient(
+							to right,
+							$color5,
+							$primary-light
+						);
+					}
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width: 750px) {
+		padding: 35rem 3rem 10rem;
+		margin-top: -35rem;
+	}
+
+	@include breakpoint(xs) {
+		padding: 35rem 3rem 10rem;
+		margin-top: -40rem;
+	}
+}
+// end of section-features
+
+// section-partners
+.section-partners {
+	background-image: linear-gradient(
+			to bottom right,
+			rgba($primary-light, 0.3),
+			rgba($primary-dark, 0.3)
+		),
+		url("../img/bg-2.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-top: -1rem;
+
+	.content {
+		padding: 5rem 0;
+		backdrop-filter: blur(10px);
+		overflow: hidden;
+	}
+
+	$slides: 6;
+	$slide-width: 25rem;
+	.slider {
+		max-width: 120rem;
+		margin: 0 auto;
+		overflow: hidden;
+		position: relative;
+		border-left: 2px solid rgba($primary, 0.2);
+		border-right: 2px solid rgba($primary, 0.2);
+
+		&__track {
+			animation: scroll 30s linear infinite;
+			display: flex;
+			align-items: center;
+			width: calc($slide-width * 14);
+		}
+
+		&__slide {
+			padding: 0 3rem;
+			width: $slide-width;
+			> img {
+				max-width: 12rem;
+				max-height: 12rem;
+				filter: sepia(12%) hue-rotate(188deg) brightness(99%) contrast(95%);
+			}
+		}
+	}
+
+	@keyframes scroll {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(calc(-1 * $slide-width * $slides));
+		}
+	}
+}
+// end of section-partners
+
+// section-professions
+.section-professions {
+	overflow: hidden;
+	padding: 5rem 2rem;
+
+	background-image: linear-gradient(
+			to bottom right,
+			rgba($primary-light, 0.3),
+			rgba($primary-dark, 0.3)
+		),
+		url("../img/bg-2.jpg");
+
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	.hexagon__pane {
+		.card-box {
+			height: 100%;
+
+			&__heading {
+				background-clip: text;
+				-webkit-background-clip: text;
+				color: transparent;
+				position: relative;
+				perspective: 1500px;
+			}
+
+			&__image-showcase {
+				background-blend-mode: screen;
+				background-size: cover;
+				background-position: center;
+				border-radius: 5px;
+			}
+
+			&__body {
+				color: $white;
+			}
+
+			&__button {
+				background-color: transparent;
+				background-clip: text;
+				-webkit-background-clip: text;
+				color: transparent;
+				border-image-slice: 1;
+			}
+		}
+
+		&:nth-child(1) {
+			background-image: linear-gradient(
+				to right,
+				rgba($primary-dark, 0.45),
+				rgba($color1-dark, 0.5)
+			);
+
+			.card-box {
+				&__heading {
+					background-image: linear-gradient(
+						to right,
+						$primary-light,
+						$color1-light
+					);
+				}
+
+				&__image-showcase {
+					background-image: url(../img/card-box-1.jpg);
+					background-position: 37%;
+				}
+
+				&__body {
+					li::before {
+						color: $primary-light;
+					}
+				}
+
+				&__button {
+					border-image: linear-gradient(
+						to right,
+						$primary-light,
+						$color1-light
+					);
+					border-image-slice: 1;
+					background-image: linear-gradient(
+						to right,
+						$primary-light,
+						$color1-light
+					);
+				}
+			}
+		}
+
+		&:nth-child(2) {
+			background-image: linear-gradient(
+				to right,
+				rgba($primary-dark, 0.3),
+				rgba($color2-dark, 0.3)
+			);
+			.card-box {
+				&__heading {
+					background-image: linear-gradient(
+						to right,
+						$color2-light,
+						$primary-light
+					);
+				}
+
+				&__image-showcase {
+					background-image: url(../img/card-box-2.jpg);
+				}
+
+				&__body {
+					li::before {
+						color: $color2-light;
+					}
+				}
+
+				&__button {
+					border-image: linear-gradient(
+						to right,
+						$color2-light,
+						$primary-light
+					);
+					border-image-slice: 1;
+					background-image: linear-gradient(
+						to right,
+						$color2-light,
+						$primary-light
+					);
+				}
+			}
+		}
+
+		&:nth-child(3) {
+			background-image: linear-gradient(
+				to right,
+				rgba($color3-dark, 0.3),
+				rgba($color2-dark, 0.3)
+			);
+
+			.card-box {
+				&__heading {
+					background-image: linear-gradient(
+						to right,
+						$color3-light,
+						$color2-light
+					);
+				}
+
+				&__image-showcase {
+					background-image: url(../img/card-box-3.jpg);
+					background-position: 68%;
+				}
+
+				&__body {
+					li::before {
+						color: $color3-light;
+					}
+				}
+
+				&__button {
+					border-image: linear-gradient(to right, $color3-light, $color2-light);
+					border-image-slice: 1;
+					background-image: linear-gradient(
+						to right,
+						$color3-light,
+						$color2-light
+					);
+				}
+			}
+		}
+
+		&:nth-child(4) {
+			background-image: linear-gradient(
+				to right,
+				rgba($color4-dark, 0.3),
+				rgba($color3-dark, 0.3)
+			);
+
+			.card-box {
+				&__heading {
+					background-image: linear-gradient(
+						to right,
+						$color4-light,
+						$color3-light
+					);
+				}
+
+				&__image-showcase {
+					background-image: url(../img/card-box-4.jpg);
+				}
+
+				&__body {
+					li::before {
+						color: $color4-light;
+					}
+				}
+
+				&__button {
+					border-image: linear-gradient(to right, $color4-light, $color3-light);
+					border-image-slice: 1;
+					background-image: linear-gradient(
+						to right,
+						$color4-light,
+						$color3-light
+					);
+				}
+			}
+		}
+
+		&:nth-child(5) {
+			background-image: linear-gradient(
+				to right,
+				rgba($color5-dark, 0.3),
+				rgba($color4-dark, 0.3)
+			);
+
+			.card-box {
+				&__heading {
+					background-image: linear-gradient(
+						to right,
+						$color5-light,
+						$color4-light
+					);
+				}
+
+				&__image-showcase {
+					background-image: url(../img/card-box-5.jpg);
+				}
+
+				&__body {
+					li::before {
+						color: $color5-light;
+					}
+				}
+
+				&__button {
+					border-image: linear-gradient(to right, $color5-light, $color4-light);
+					border-image-slice: 1;
+					background-image: linear-gradient(
+						to right,
+						$color5-light,
+						$color4-light
+					);
+				}
+			}
+		}
+
+		&:nth-child(6) {
+			background-image: linear-gradient(
+				to right,
+				rgba($primary-dark, 0.5),
+				rgba($color5-dark, 0.5)
+			);
+
+			.card-box {
+				&__heading {
+					background-image: linear-gradient(
+						to right,
+						$primary-light,
+						$color5-light
+					);
+				}
+
+				&__image-showcase {
+					background-image: url(../img/card-box-6.jpg);
+				}
+
+				&__body {
+					li::before {
+						color: $primary-light;
+					}
+				}
+
+				&__button {
+					border-image: linear-gradient(
+						to right,
+						$primary-light,
+						$color5-light
+					);
+					border-image-slice: 1;
+					background-image: linear-gradient(
+						to right,
+						$primary-light,
+						$color5-light
+					);
+				}
+			}
+		}
+	}
+
+	.hexagon__pane-content {
+		display: flex;
+	}
+}
+// end of section-professions
+
+// section-stories
+.section-stories {
+	padding: 15rem 0;
+	position: relative;
+	background-color: rgba($white, 0.2);
+}
+// end of section-stories
+
+// section-inquiry
+.section-inquiry {
+	padding: 15rem 3rem;
+	background-image: linear-gradient(
+		to bottom right,
+		$primary-light,
+		$primary-dark
+	);
+}
+// end of section-inquiry
+
+.apply {
+	background-image: linear-gradient(
+			105deg,
+			rgba($white, 0.42) calc(50% - 1px),
+			calc(50% + 1px),
+			transparent
+		),
+		url("../img/bg-1-small.jpg");
+	background-size: cover;
+	border-radius: 3px;
+	box-shadow: 0 0 2rem rgba($black, 0.6);
+	width: 100%;
+
+	&__form {
+		width: 50%;
+		padding: 6rem;
+	}
+
+	@include breakpoint(lg) {
+		background-image: linear-gradient(
+				105deg,
+				rgba($white, 0.42) calc(65% - 1px),
+				65%,
+				transparent
+			),
+			url("../img/bg-1-small.jpg");
+
+		&__form {
+			width: 65%;
+			padding: 5rem;
+		}
+	}
+
+	@include breakpoint(md) {
+		background-image: linear-gradient(
+				105deg,
+				rgba($white, 0.42) calc(75% - 1px),
+				75%,
+				transparent
+			),
+			url("../img/bg-1-small.jpg");
+
+		&__form {
+			width: 75%;
+			padding: 4rem;
+		}
+	}
+
+	@include breakpoint(sm) {
+		background-image: linear-gradient(
+				105deg,
+				rgba($white, 0.42) calc(100% - 1px),
+				100%,
+				transparent
+			),
+			url("../img/bg-1-small.jpg");
+
+		&__form {
+			width: 100%;
+		}
+	}
+}
+// end of section-professions
